@@ -23,4 +23,4 @@ class SESHandler(object):
             self.client = boto3.client('ses')
 
     def send_email(self, **kwargs):
-        return self.client.send_email(kwargs)
+        return self.client.send_email(**kwargs)
