@@ -20,8 +20,8 @@ class S3Handler(object):
     def __init__(self, bucket_name=None, aws_access_key_id=None, aws_secret_access_key=None, aws_region_name='us-west-2'):
         if aws_access_key_id and aws_secret_access_key:
             session = Session(aws_access_key_id=aws_access_key_id,
-                                   aws_secret_access_key=aws_secret_access_key,
-                                   region_name=aws_region_name)
+                              aws_secret_access_key=aws_secret_access_key,
+                              region_name=aws_region_name)
             self.resource = session.resource('s3')
             self.resource = session.resource('s3')
         else:
